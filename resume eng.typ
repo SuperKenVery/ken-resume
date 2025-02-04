@@ -2,10 +2,10 @@
 
 #set page(
   margin: (
-    left: 10mm, 
-    right: 10mm, 
-    top: 15mm, 
-    bottom: 15mm
+    left: 10mm,
+    right: 10mm,
+    top: 10mm,
+    bottom: 10mm
   ),
 )
 
@@ -13,24 +13,16 @@
 
 #show: project.with(
   theme: rgb("#0F83C0"),
-  name: "Harkunwar Kochar",
-  title: "Software Engineer",
+  name: "许煜恒",
+  // title: "Software Engineer",
   contact: (
     contact(
-      text: "604-123-4567"
+      text: "137-1477-8940"
     ),
     contact(
-      text: "hello@example.com", 
-      link: "mailto:hello@example.com"
+      text: "xyhken@icloud.com",
+      link: "mailto:xyhken@icloud.com"
     ),
-    contact(
-      text: "GitHub.com/Harkunwar", 
-      link: "https://www.github.com/Harkunwar"
-    ),
-    contact(
-      text: "www.Harkunwar.com", 
-      link: "https://www.harkunwar.com"
-    )
   ),
   main: (
     section(
@@ -120,7 +112,7 @@
             "AWS",
             "React",
             "Terraform",
-            "Cypress", 
+            "Cypress",
             "Selenium"
           ).join(" • "),
         ),
@@ -180,4 +172,3 @@
     ),
   ),
 )
-

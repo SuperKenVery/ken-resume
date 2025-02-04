@@ -1,3 +1,54 @@
+// From https://github.com/DeveloperPaul123/modern-cv/
+#import "@preview/fontawesome:0.5.0": *
+#let color-darkgray = rgb("#333333")
+#let github-link(github-path, body: none) = {
+  // set box(height: 11pt)
+
+  [
+    #fa-icon("github", fill: color-darkgray)
+    #link(
+      "https://github.com/" + github-path,
+      if(body==none) {github-path} else {body},
+    )
+  ]
+}
+
+#let __justify_align(left_body, right_body) = {
+  block[
+    #left_body
+    #box(width: 1fr)[
+      #align(right)[
+        #right_body
+      ]
+    ]
+  ]
+}
+
+/// Justified header that takes a primary section and a secondary section. The primary section is on the left and the secondary section is on the right. This is a smaller header compared to the `justified-header`.
+/// - primary (content): The primary section of the header
+/// - secondary (content): The secondary section of the header
+#let secondary-justified-header(primary, secondary) = {
+  __justify_align[
+    === #primary
+  ][
+    #tertiary-right-header[#secondary]
+  ]
+}
+
+/// Justified header that takes a primary section and a secondary section. The primary section is on the left and the secondary section is on the right.
+/// - primary (content): The primary section of the header
+/// - secondary (content): The secondary section of the header
+#let justified-header(primary, secondary) = {
+  pad[
+    #__justify_align[
+      #primary
+    ][
+      #secondary
+    ]
+  ]
+}
+
+// Original https://github.com/Harkunwar/attractive-typst-resume
 #let contact(text: "", link: none) = {
   (text: text, link: link)
 }
@@ -26,7 +77,17 @@
   body) = {
 
   let backgroundTitle(content) = {
-    align(center, box(fill: theme, text(white, size: 1.25em, weight: "bold", upper(content)), width: 1fr, inset: 0.3em))
+    align(center,
+      box(
+        // fill: gray,
+        text(theme, size: 1.25em, weight: "bold", upper(content)),
+        width: 1fr,
+        inset: 0.3em,
+        stroke: (
+          bottom: theme
+        )
+      )
+    )
   }
 
   let secondaryTitle(content) = {
@@ -61,7 +122,7 @@
     contactColumn,
     titleColumn,
   )
-  
+
   set par(justify: true)
 
   let formattedLanguageSkills = [
@@ -69,31 +130,24 @@
   ]
 
   let createLeftRight(left: [], right: none) = {
-    if (right == none) { 
+    if (right == none) {
       align(start, text(left))
     } else {
-      grid(
-        columns: (1fr, 1fr),
-        align(start, text(left)),
-        align(end, right),
-      )
-    } 
+      // grid(
+      //   columns: (1fr, 1fr),
+      //   align(start, text(left)),
+      //   align(end, right),
+      // )
+      justified-header(left, right)
+    }
   }
-
-//  let parseContentList(contentList) = {
-//    if contentList.format == "bulletJoin" [
-//      #text(contentList.content.join(" • "))
-//    ] else if contentList.format == "bulletList" [
-//      #contentList.content.map(c => list(c)).join()
-//    ]
-//  }
 
   let parseSubSections(subSections) = {
     subSections.map(s => {
       [
         #createLeftRight(
           left: secondaryTitle(s.title),
-          right: if s.titleEnd != none { 
+          right: if s.titleEnd != none {
             italicColorTitle(s.titleEnd)
           }
         )

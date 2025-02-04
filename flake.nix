@@ -13,11 +13,8 @@
           buildInputs = with pkgs; [
             typst
           ];
-
-          shellHook = ''
-            echo `${pkgs.typst}/bin/typst --version`
-          '';
+          TYPST_FONT_PATHS = "./assets/fonts";
         };
-      });
+      }
+    );
 }
-
