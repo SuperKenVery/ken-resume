@@ -4,20 +4,20 @@
   margin: (
     left: 10mm,
     right: 10mm,
-    top: 10mm,
-    bottom: 10mm
+    top: 15mm,
+    bottom: 15mm
   ),
 )
 
-#set text(font: "Mulish")
+#set text(font: "Mulish", lang: "en", region: "US")
 
 #show: project.with(
   theme: rgb("#0F83C0"),
-  name: "许煜恒",
+  name: "YuHeng Xu",
   // title: "Software Engineer",
   contact: (
     contact(
-      text: "137-1477-8940"
+      text: "+86 137-1477-8940"
     ),
     contact(
       text: "xyhken@icloud.com",
@@ -26,62 +26,84 @@
   ),
   main: (
     section(
-      title: "Work Experience",
+      title: "Internship Experience",
       content: (
         subSection(
-          title: "Splunk",
-          titleEnd: "Vancouver, BC",
-          subTitle: "Software Engineer",
-          subTitleEnd: "(June 2021 - Present)",
+          title: "ByteDance",
+          titleEnd: "ShenZhen",
+          subTitle: "Lark iOS Development",
+          subTitleEnd: "(2025.1 - Present)",
           content: list(
-            [Improved web page load time by a factor of *10 times* by using React Virtualized Lazy Loading to render large lists.],
-            [Spearheaded the implementation and design of embedding images and icons in Splunk Dashboard using React affecting *1000+ users*.],
-            [Designed and implemented *4 major dialogs* used in Splunk Dashboard.],
-          ),
-        ),
-        subSection(
-          title: "AppNeta",
-          titleEnd: "Vancouver, BC",
-          subTitle: "Full Stack Developer Intern",
-          subTitleEnd: "(September 2019 – May 2020)",
-          content: list(
-            [Solely responsible for the development of the Web Analytics Dashboard using AWS Lambda and API Gateway in NodeJS.],
-            [Improved Experience Monitoring feature with React and Java which actively monitors *4000+ sites* from around the world.],
-            [Successfully developed the HTTP Monitoring feature used by *over 100 companies* to monitor their APIs and Websites.],
-            [Refined analytics report system generating *1000+ reports daily*.],
-            [Automated internal AWS tasks with Terraform and TeamCity.]
-          ),
-        ),
-        subSection(
-          title: "Better Way Lighting",
-          titleEnd: "Vancouver, BC",
-          subTitle: "Embedded System Developer",
-          subTitleEnd: "(April 2019 – Aug 2020)",
-          content: list(
-            [Spearheaded a Smart LED Mesh System Project for the company.],
-            [Physically designed and programmed an Arduino DMX Controller to automate testing of lighting products.],
-            [Built an interactive Movie Lighting System using the Espressif Framework.],
+            [In charge of PermissionSDK for HarmonyOS Next],
           ),
         ),
       ),
     ),
     section(
-      title: "Projects",
+      title: "Research Experience",
       content: (
         subSection(
-          title: "Nutri – Nutrition Tracker app",
-          content: list("Engineered and completed a nutrition tracker app in 24 hours using Flutter and Microsoft’s Computer Vision APIs. The app allows one to take picture of their meal and add the nutrition level one ate to their daily intake.")
+          title: "AutoLUT",
+          titleEnd: "NJU MCG",
+          subTitle: [Submitting to *CVPR 2025*, *first author*, LUT-based image SR],
+          content: list(
+            [Previous MuLUT uses fixed sampling strategies. I introduced an *AutoSample layer* which allows configuring the sample size freely and enables the network to learn an empirically better sampling strategy. ],
+            [Due to the numerical range of LUT inputs, the previous work did not use a residual network. I introduced *AdaRL (Adaptive Residual Learning)* which enhances the network's performance without increasing the size of the LUT.],
+            [My method can made *0.3db PSNR* improvement on MuLUT and reduce storage usage by more than 50% on SPF-LUT (SOTA).]
+          ),
+        ),
+      )
+    ),
+    section(
+      title: "Project Experience",
+      content: (
+        subSection(
+          title: "Alternative Schedule for NJU",
+          subTitle: "A calendar subscription service",
+          titleEnd: github-link("SuperKenVery/nju-schedule-ics"),
+          content: list(
+            [Scrapes the NJU course schedule and converts it to iCalendar format for subscription services, with a Rust backend and a 0-javascript frontend],
+            [Conservatively estimated to have hundreds of users.],
+          )
         ),
         subSection(
-          title: "CycSafe Vest",
-          content: list("Formulated a custom vest for bikers that uses Arduino and an accelerometer to produce LED lights on the back using hand gestures.")
+          title: "Wow Lyrics",
+          titleEnd: github-link("SuperKenVery/wow-lyric"),
+          subTitle: "Apple-Music-like lyric animation",
+          content: list(
+            [Written in WebGL with custom shaders],
+            [Implemented lyric scrolling, dynamic gaussian blur and rotating and blurred background.]
+          )
         ),
         subSection(
-          title: "Root Checker",
-          content: list([Created a simple ad-free android app using Java and Bash to check if the phone is rooted. It has over 500,000 downloads and has generated *\$2000 in revenue*.])
+          title: "Nemu",
+          titleEnd: github-link("SuperKenVery/nju-ics-pa"),
+          subTitle: "An x86 virtual machine and a 32-bit protected mode kernel",
+          content: list(
+            [It can run #link("https://github.com/sdlpal/sdlpal", underline("SDLPAL"))],
+          )
+        ),
+        subSection(
+          title: "Element-web",
+          subTitle: "A large-scale opensource chat app",
+          titleEnd: github-link("element-hq/element-web"),
+          content: list(
+            [Fixed Safari IME bug],
+            [Added support for "Insert from iPhone/iPad" on Safari],
+            [Use WebAudioAPI to play notification sound so that it doesn't appear in system media control]
+          )
+        ),
+        subSection(
+          title: "chatgpt wrapper",
+          titleEnd: github-link("llm-workflow-engine/llm-workflow-engine", body: "llm-workflow-engine"),
+          subTitle: "A third-party ChatGPT API before OpenAI released its official one",
+          content: list(
+            [Greatly improved stableness by using a headless browser to complete captcha],
+            [Added async support]
+          )
         ),
       ),
-    )
+    ),
   ),
   sidebar: (
     section(
@@ -90,82 +112,44 @@
         subSection(
           title: "Languages",
           content: (
-            "C",
-            "C++",
+            "Python",
+            "Rust",
+            "C/C++",
+            "Swift",
             "CSS",
             "HTML5",
             "Java",
             "JavaScript",
-            "Rust",
             "TypeScript",
           ).join(" • "),
         ),
-        subSection(
-          title: "Technologies",
-          content: (
-            "NodeJS",
-            "Firebase",
-            "Git",
-            "Flutter",
-            "Express",
-            "Arduino",
-            "AWS",
-            "React",
-            "Terraform",
-            "Cypress",
-            "Selenium"
-          ).join(" • "),
-        ),
-        subSection(
-          title: "concepts",
-          content: (
-            "Object-oriented programming",
-            "Machine Learning",
-            "Unit Tests",
-            "Functional Programming",
-            "Agile Methadology",
-          ).join(" • "),
-        ),
       ),
     ),
     section(
-      title: "Education",
+      title: "Education background",
       content: (
         subSection(
-          title: [
-            #set par(justify: false)
-            University of British Columbia
-          ],
-          subTitle: "BSc in Computer Science",
+          title: [NanJing University],
+          subTitle: "Batchelor's degree, Computer Science",
           content: [
-            Graduated: May 2021\
-            Vancouver, BC
+            2022-2026
+
+            Current GPA 4.47/5.0
           ],
         ),
       ),
     ),
     section(
-      title: "Volunteer",
-      content: (
-        subSection(
-          title: "Project Roots",
-          content: list(
-            [Saved over *900,000L* of water], [Generated over *\$6000*],
-            [Saved consumers over *\$8000*],
-          ),
-        ),
-      ),
-    ),
-    section(
-      title: "Awards",
+      title: "Work & Honors",
       content: (
         subSection(
           content: list(
-            [1st Year Computer Science \(BSc\) *Honorable Mention*],
-            [Hellmann’s Best New Enactus Project 2019 *1st Prize*],
-            [Hellmann’s Food Security Challenge 2018 *1st Prize*],
-            [Scotiabank EcoLiving Green Challenge *Regional Champion*],
-            [Scotiabank Environmental Challenge *Regional Champion*],
+            [People’s Scholarship Second Prize],
+            [People’s Scholarship Third Prize],
+            [Co-founder and Technical Team Member of NJU AIA Artificial Intelligence Association],
+            [Head of Technical Department of Nanjing University TIC TengChuang Rhino Bird Club],
+            [Member of NJU Trinity CTF Team],
+            [SICP (Structure and Interpretation of Computer Programs) 2023 Course Teaching Assistant],
           ),
         ),
       ),

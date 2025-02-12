@@ -36,6 +36,7 @@
           subTitle: "飞书 iOS开发",
           subTitleEnd: "(2025.1 - 现在)",
           content: list(
+            [负责鸿蒙next的权限中台SDK，使用rust编写，预计安卓和iOS也会使用此代码],
             [修复各种bug，包括一些长尾问题],
           ),
         ),
@@ -46,12 +47,12 @@
       content: (
         subSection(
           title: "AutoLUT",
-          titleEnd: "南京大学MCG多媒体组",
-          subTitle: "基于查找表的图像超分",
+          titleEnd: "南京大学MCG媒体计算研究组组",
+          subTitle: [*CVPR25*在投 一作 基于查找表的图像超分],
           content: list(
-            [前作MuLUT使用了固定的sdy采样策略，我改成自学习的采样策略，增大了感知野、提升了采样效率],
-            [由于LUT输入数字范围问题，前作并未使用残差网络。我通过引入自学习残差，不增大表提及的同时增强了网络的性能],
-            [我的方法在MuLUT上可提升0.3db PSNR，在SPF-LUT（SOTA）上可降低超过50%的存储占用]
+            [前作MuLUT使用了固定的sdy采样策略；我改成自学习的采样方式，允许自由地调整采样策略和采样范围，增大了感知野、改善了采样效果],
+            [由于LUT输入数字范围问题，前作并未使用残差网络。我通过引入自学习残差，动态调整前后输入的权重，在不增大查找表体积的同时增强了网络的性能],
+            [我的方法在MuLUT上可提升*0.3db PSNR*，在SPF-LUT（SOTA）上可*降低超过50%*的存储占用]
           ),
         ),
       )
@@ -61,10 +62,12 @@
       content: (
         subSection(
           title: "南哪另一课表",
+          subTitle: "日历订阅服务",
           titleEnd: github-link("SuperKenVery/nju-schedule-ics"),
           content: list(
-            [将学校课表转换为iCalendar格式的日历订阅],
-            [Rust服务端，0-javascript 网页前端]
+            [爬取南京大学课表转换为iCalendar格式的日历，提供订阅服务],
+            [Rust服务端，0-javascript 网页前端],
+            [保守估计上百用户],
           )
         ),
         subSection(
@@ -73,6 +76,7 @@
           subTitle: "类似Apple Music的歌词动画",
           content: list(
             [使用WebGL自定义shader开发的类似Apple Music歌词动画],
+            [实现了歌词滚动动画、动态高斯模糊、旋转+模糊背景]
           )
         ),
         subSection(
@@ -126,12 +130,16 @@
       ),
     ),
     section(
-      title: "教育经历",
+      title: "教育背景",
       content: (
         subSection(
           title: [南京大学],
           subTitle: "本科 计算机科学与技术",
-          content: [2022-2026],
+          content: [
+            2022-2026
+
+            目前GPA 4.47/5.0
+          ],
         ),
       ),
     ),

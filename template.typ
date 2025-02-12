@@ -117,7 +117,7 @@
   }).join()]
 
   grid(
-    columns: (1fr, 2fr),
+    columns: (2fr, 7fr),
     column-gutter: 2em,
     contactColumn,
     titleColumn,
@@ -179,7 +179,7 @@
 
 
   grid(
-    columns: (1fr, 2fr),
+    columns: (2fr, 7fr),
     column-gutter: 1em,
     sidebarSection,
     mainSection,
