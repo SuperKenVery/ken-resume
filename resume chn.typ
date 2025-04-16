@@ -28,27 +28,12 @@
   ),
   main: (
     section(
-      title: "实习经历",
-      content: (
-        subSection(
-          title: "字节跳动",
-          titleEnd: "深圳",
-          subTitle: "飞书 iOS开发",
-          subTitleEnd: "(2025.1 - 现在)",
-          content: list(
-            [负责鸿蒙next的权限中台SDK，使用rust编写，预计安卓和iOS也会使用此代码],
-            [修复各种bug，包括一些长尾问题],
-          ),
-        ),
-      ),
-    ),
-    section(
       title: "科研经历",
       content: (
         subSection(
-          title: "AutoLUT",
-          titleEnd: "南京大学MCG媒体计算研究组组",
-          subTitle: [*CVPR25*在投 一作 基于查找表的图像超分],
+          title: [*[CVPR2025 一作]* AutoLUT],
+          titleEnd: "南京大学MCG媒体计算研究组",
+          subTitle: [AutoLUT: LUT-Based Image Super-Resolution with Automatic Sampling and Adaptive Residual Learning],
           content: list(
             [前作MuLUT使用了固定的sdy采样策略；我改成自学习的采样方式，允许自由地调整采样策略和采样范围，增大了感知野、改善了采样效果],
             [由于LUT输入数字范围问题，前作并未使用残差网络。我通过引入自学习残差，动态调整前后输入的权重，在不增大查找表体积的同时增强了网络的性能],
@@ -56,6 +41,21 @@
           ),
         ),
       )
+    ),
+    section(
+      title: "实习经历",
+      content: (
+        subSection(
+          title: "字节跳动",
+          titleEnd: "深圳",
+          subTitle: "飞书 iOS开发",
+          subTitleEnd: "(2025.1 - 2025.4)",
+          content: list(
+            [负责鸿蒙next的权限中台SDK，使用rust编写，预计安卓和iOS也会使用此代码],
+            [修复各种bug，包括一些长尾问题],
+          ),
+        ),
+      ),
     ),
     section(
       title: "项目经历",
@@ -138,7 +138,7 @@
           content: [
             2022-2026
 
-            目前GPA 4.47/5.0
+            目前GPA 4.45/5.0
           ],
         ),
       ),

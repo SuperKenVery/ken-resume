@@ -5,7 +5,7 @@
     left: 10mm,
     right: 10mm,
     top: 15mm,
-    bottom: 15mm
+    bottom: 14mm
   ),
 )
 
@@ -26,26 +26,12 @@
   ),
   main: (
     section(
-      title: "Internship Experience",
-      content: (
-        subSection(
-          title: "ByteDance",
-          titleEnd: "ShenZhen",
-          subTitle: "Lark iOS Development",
-          subTitleEnd: "(2025.1 - Present)",
-          content: list(
-            [In charge of PermissionSDK for HarmonyOS Next],
-          ),
-        ),
-      ),
-    ),
-    section(
       title: "Research Experience",
       content: (
         subSection(
-          title: "AutoLUT",
+          title: "[CVPR2025 First Author] AutoLUT",
           titleEnd: "NJU MCG",
-          subTitle: [Submitting to *CVPR 2025*, *first author*, LUT-based image SR],
+          subTitle: [AutoLUT: LUT-Based Image Super-Resolution with Automatic Sampling and Adaptive Residual Learning],
           content: list(
             [Previous MuLUT uses fixed sampling strategies. I introduced an *AutoSample layer* which allows configuring the sample size freely and enables the network to learn an empirically better sampling strategy. ],
             [Due to the numerical range of LUT inputs, the previous work did not use a residual network. I introduced *AdaRL (Adaptive Residual Learning)* which enhances the network's performance without increasing the size of the LUT.],
@@ -53,6 +39,20 @@
           ),
         ),
       )
+    ),
+    section(
+      title: "Internship Experience",
+      content: (
+        subSection(
+          title: "ByteDance",
+          titleEnd: "ShenZhen",
+          subTitle: "Lark iOS Development",
+          subTitleEnd: "(2025.1 - 2025.4)",
+          content: list(
+            [In charge of PermissionSDK for HarmonyOS Next],
+          ),
+        ),
+      ),
     ),
     section(
       title: "Project Experience",
@@ -134,7 +134,7 @@
           content: [
             2022-2026
 
-            Current GPA 4.47/5.0
+            Current GPA 4.45/5.0
           ],
         ),
       ),
