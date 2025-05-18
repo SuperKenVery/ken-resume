@@ -12,6 +12,7 @@
         devShells.default = pkgs.mkShell {
           buildInputs = with pkgs; [
             typst
+            ghostscript
           ];
           TYPST_FONT_PATHS = "./assets/fonts";
         };

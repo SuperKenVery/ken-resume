@@ -12,7 +12,7 @@
 #set text(font: "Mulish", lang: "en", region: "US")
 
 #show: project.with(
-  theme: rgb("#0F83C0"),
+  theme: rgb("#888888"),
   name: "YuHeng Xu",
   // title: "Software Engineer",
   contact: (

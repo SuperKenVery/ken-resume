@@ -14,7 +14,7 @@
 #set text(font: "Mulish", lang: "zh", region: "CN")
 
 #show: project.with(
-  theme: rgb("#0F83C0"),
+  theme: rgb("#888888"),
   name: "许煜恒",
   // title: "Software Engineer",
   contact: (
@@ -158,5 +158,15 @@
         ),
       ),
     ),
+    section(
+      title: "竞赛",
+      content: (
+        subSection(
+          content: list(
+            [中国网谷·华为杯”第三届中国研究生网络安全创新大赛决赛 三等奖]
+          ),
+        ),
+      ),
+    )
   ),
 )
