@@ -13,6 +13,7 @@
           buildInputs = with pkgs; [
             typst
             ghostscript
+            tinymist
           ];
           TYPST_FONT_PATHS = "./assets/fonts";
         };
